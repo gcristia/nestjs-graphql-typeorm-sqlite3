@@ -1,4 +1,4 @@
-# Nest.js + Graphql + Typeorm + SQlite3
+# Nest.js + Graphql + Typeorm + SQLite3
 
 ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) 
@@ -8,7 +8,7 @@
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
 ## Description
-Nestjs GraphQL TypeORM (with SQlite3 and SQL relationships)
+Nest.js GraphQL TypeORM (with SQLite3 and SQL relationships)
 
 ## Installation
 
@@ -22,7 +22,7 @@ Nestjs GraphQL TypeORM (with SQlite3 and SQL relationships)
 
 ## Expressions of Gratitude 🎁
 
-![nicobytes](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
+![fazttech](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)
 
 [fazttech](http://youtube.com/fazttech) made by [Fazt](https://github.com/fazt)
 
