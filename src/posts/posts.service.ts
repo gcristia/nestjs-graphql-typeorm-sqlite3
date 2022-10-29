@@ -1,15 +1,19 @@
 import { Injectable } from '@nestjs/common'
 import { Post } from './post.entity'
+import { InjectRepository } from '@nestjs/typeorm'
+import { Repository } from 'typeorm'
+import { CreatePostRequest } from './dto/requests/create-post.request'
 
 @Injectable()
 export class PostsService {
-    findAll(): Post[] {
-        return [
-            {
-                id: 1,
-                title: 'Hello World',
-                content: 'Hello World',
-            },
-        ]
+    constructor(@InjectRepository(Post) private readonly postsRepository: Repository<Post>) {}
+
+    findAll(): Promise<Post[]> {
+        return this.postsRepository.find()
+    }
+
+    createPost(post: CreatePostRequest): Promise<Post> {
+        const newPost = this.postsRepository.create(post)
+        return this.postsRepository.save(newPost)
     }
 }
