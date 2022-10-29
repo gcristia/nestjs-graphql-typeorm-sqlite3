@@ -1,0 +1,55 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Author {
+  """Id del Author"""
+  id: Int!
+
+  """Name of Author"""
+  name: String!
+
+  """Posts of Author"""
+  posts: [Post!]
+}
+
+type Post {
+  id: Int!
+  title: String!
+  content: String
+
+  """Id of Author"""
+  authorId: Int!
+  author: Author!
+}
+
+type Query {
+  posts: [Post!]!
+  post(id: Int!): Post!
+  authors: [Author!]!
+  author(id: Int!): Author!
+}
+
+type Mutation {
+  createPost(postRequest: CreatePostInput!): Post!
+  createAuthor(createAuthorInput: CreateAuthorInput!): Author!
+  updateAuthor(updateAuthorInput: UpdateAuthorInput!): Author!
+  removeAuthor(id: Int!): Author!
+}
+
+input CreatePostInput {
+  title: String!
+  content: String
+  authorId: Float!
+}
+
+input CreateAuthorInput {
+  """Name of Author"""
+  name: String!
+}
+
+input UpdateAuthorInput {
+  """Name of Author"""
+  name: String
+  id: Int!
+}
